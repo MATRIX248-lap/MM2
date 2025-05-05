@@ -1,0 +1,73 @@
+-- سكربت MM2  بواسطة MATRIX 
+
+-- تحميل مكتبة الواجهة
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+-- إعداد الألوان المخصصة للواجهة
+local colors = {
+    SchemeColor = Color3.fromRGB(0, 170, 255),
+    Background = Color3.fromRGB(20, 20, 20),
+    Header = Color3.fromRGB(30, 30, 30),
+    TextColor = Color3.fromRGB(255, 255, 255),
+    ElementColor = Color3.fromRGB(35, 35, 35)
+}
+
+-- إنشاء النافذة
+local Window = Library.CreateLib("MM2 | رواف", colors)
+
+-- تبويبة المميزات الرئيسية
+local MainTab = Window:NewTab("Main")
+local MainSection = MainTab:NewSection("الميزات الأسطورية")
+
+-- Auto Kill
+MainSection:NewButton("Auto Kill القاتل الذكي", "يطلق على القاتل إذا طلع السكين", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRipper/MM2AutoKill/main/script.lua"))()
+end)
+
+-- ESP
+MainSection:NewButton("ESP متطور", "يعرض القاتل والشريف والعملات", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRipper/MM2ESP/main/script.lua"))()
+end)
+
+-- Silent Aim (سكين)
+MainSection:NewButton("Silent Aim للسكين", "يرمي السكين ويصيب الأقرب تلقائيًا", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRipper/SilentKnife/main/script.lua"))()
+end)
+
+-- Auto Coin Farm
+MainSection:NewButton("Auto Coin Farm", "يجمع العملات تلقائي بدون كشف", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRipper/MM2AutoFarm/main/script.lua"))()
+end)
+
+-- Auto Sheriff Mode
+MainSection:NewButton("Auto Sheriff Mode", "ياخذ سلاح الشريف إذا مات تلقائي", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRipper/MM2AutoSheriff/main/script.lua"))()
+end)
+
+-- Anti Murder Detection
+MainSection:NewButton("كاشف القاتل + تنبيه", "يعطيك تنبيه عند أول قتل", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRipper/MM2MurderDetect/main/script.lua"))()
+end)
+
+-- Teleport Menu
+MainSection:NewButton("Teleport Menu", "تنقل للكوينز أو اللاعبين", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRipper/MM2Teleport/main/script.lua"))()
+end)
+
+-- تروولات
+MainSection:NewButton("تروولات", "يخفي الاسم، شفاف، طيران", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRipper/MM2TrollPack/main/script.lua"))()
+end)
+
+-- زر طلقه شريف مخصص
+MainSection:NewButton("طلقة شريف تلقائية", "يضرب القاتل تلقائيًا عند الضغط", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRipper/MM2AutoShot/main/script.lua"))()
+end)
+
+-- إخفاء/إظهار الواجهة بزر F
+MainSection:NewKeybind("إخفاء الواجهة", "اضغط F لإخفاء/إظهار الواجهة", Enum.KeyCode.F, function()
+    Library:ToggleUI()
+end)
+
+-- انتهى السكربت
+print("سكربت MM2 من تطوير MATRIX جاهز ✅")
